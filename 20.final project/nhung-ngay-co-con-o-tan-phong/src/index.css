@@ -1,0 +1,710 @@
+:root {
+    --bg: #f4f0e9;
+    --paper: #fffdf8;
+    --text: #26221f;
+    --muted: #746d66;
+    --line: #d8d0c7;
+    --accent: #9b5c5c;
+    --accent-soft: #eadbd8;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+.memory-page {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: min(1180px, calc(100% - 48px));
+    min-height: 90vh;
+
+    margin: 0 auto;
+    padding: 70px 0;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.hero-small {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0 0 28px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 600;
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.hero-description {
+    margin: 0;
+
+    max-width: 520px;
+
+    color: var(--muted);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.85;
+}
+
+.hero-image {
+    width: 100%;
+    height: 680px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--line);
+
+    box-shadow: 18px 18px 0 var(--accent-soft);
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+    margin: 0 0 20px;
+
+    color: var(--accent);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    width: min(780px, calc(100% - 40px));
+
+    margin: 110px auto;
+}
+
+.story h2 {
+    margin: 0 0 40px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+}
+
+.story p {
+    margin: 0 0 26px;
+
+    color: #4d4742;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section {
+    margin: 120px 0;
+    padding: 90px 24px;
+
+    background: #e9e2d9;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.timeline-section > .section-label {
+    width: min(900px, 100%);
+
+    margin: 0 auto 30px;
+}
+
+.timeline {
+    width: min(900px, 100%);
+
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 26px;
+
+    padding: 34px 0;
+
+    border-top: 1px solid #cbc2b8;
+}
+
+.timeline-item:last-child {
+    border-bottom: 1px solid #cbc2b8;
+}
+
+.timeline-number {
+    color: var(--accent);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.timeline-item h3 {
+    margin: 0 0 8px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+.timeline-item p {
+    margin: 0;
+
+    max-width: 650px;
+
+    color: var(--muted);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.timeline-item p + p {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    width: min(1180px, calc(100% - 48px));
+
+    margin: 130px auto;
+}
+
+.gallery-section > .section-label {
+    text-align: center;
+}
+
+.gallery-section h2 {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+}
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 30px 22px;
+}
+
+.photo-card {
+    grid-column: span 4;
+
+    cursor: pointer;
+}
+
+.photo-card:nth-child(1),
+.photo-card:nth-child(5) {
+    grid-column: span 5;
+}
+
+.photo-card:nth-child(2),
+.photo-card:nth-child(6) {
+    grid-column: span 3;
+}
+
+.photo-card:nth-child(3),
+.photo-card:nth-child(4),
+.photo-card:nth-child(7),
+.photo-card:nth-child(8) {
+    grid-column: span 4;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+
+    border: 1px solid var(--line);
+
+    filter: saturate(0.94);
+
+    transition:
+        transform 180ms ease,
+        filter 180ms ease;
+}
+
+.photo-card:hover img {
+    transform: translateY(-4px);
+
+    filter: saturate(1);
+}
+
+.photo-caption {
+    padding: 12px 2px 0;
+
+    color: var(--muted);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    width: min(800px, calc(100% - 40px));
+
+    margin: 160px auto 130px;
+    padding: 72px 76px;
+
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+
+    box-shadow: 8px 8px 0 #ded5ca;
+}
+
+.letter h2 {
+    margin: 0 0 38px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+}
+
+.letter p {
+    margin: 0 0 24px;
+
+    color: #4b4641;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    line-height: 1.95;
+}
+
+.letter-ending {
+    margin-top: 40px !important;
+
+    padding-top: 30px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--accent) !important;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 120px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--line);
+}
+
+.footer p {
+    margin: 0 0 8px;
+
+    color: var(--text);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer span {
+    color: var(--muted);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(20, 18, 17, 0.94);
+}
+
+.lightbox-content {
+    max-width: 1000px;
+
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+
+    margin: auto;
+
+    object-fit: contain;
+}
+
+.lightbox-content p {
+    margin: 18px 0 0;
+
+    color: #d8d2cc;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+.close-button {
+    position: fixed;
+
+    top: 25px;
+    right: 30px;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background 150ms ease,
+        color 150ms ease;
+}
+
+.close-button:hover {
+    background: #ffffff;
+
+    color: #222222;
+}
+
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+    background: var(--accent-soft);
+
+    color: var(--text);
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8ada2;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9d9186;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 60px 0 90px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+    }
+
+    .hero-image {
+        height: 650px;
+    }
+
+    .photo-card,
+    .photo-card:nth-child(1),
+    .photo-card:nth-child(2),
+    .photo-card:nth-child(3),
+    .photo-card:nth-child(4),
+    .photo-card:nth-child(5),
+    .photo-card:nth-child(6),
+    .photo-card:nth-child(7),
+    .photo-card:nth-child(8) {
+        grid-column: span 6;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+        width: calc(100% - 32px);
+
+        min-height: auto;
+
+        padding: 50px 0 80px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 520px;
+
+        box-shadow: 9px 9px 0 var(--accent-soft);
+    }
+
+    .story {
+        margin: 80px auto;
+    }
+
+    .story h2,
+    .gallery-section h2 {
+        font-size: 34px;
+    }
+
+    .story p {
+        font-size: 17px;
+    }
+
+    .timeline-section {
+        margin: 80px 0;
+
+        padding: 70px 20px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 15px;
+    }
+
+    .timeline-number {
+        font-size: 25px;
+    }
+
+    .timeline-item h3 {
+        font-size: 21px;
+    }
+
+    .gallery-section {
+        width: calc(100% - 32px);
+
+        margin: 90px auto;
+    }
+
+    .photo-grid {
+        display: block;
+    }
+
+    .photo-card {
+        margin-bottom: 36px;
+    }
+
+    .photo-card img {
+        height: 500px;
+    }
+
+    .letter {
+        width: auto;
+
+        margin: 100px 16px;
+
+        padding: 42px 28px;
+
+        box-shadow: 5px 5px 0 #ded5ca;
+    }
+
+    .letter h2 {
+        font-size: 34px;
+    }
+
+    .letter p {
+        font-size: 16px;
+    }
+
+    .footer {
+        margin-top: 80px;
+
+        padding: 40px 20px;
+    }
+
+    .footer p {
+        font-size: 19px;
+    }
+
+    .footer span {
+        font-size: 15px;
+    }
+
+    .lightbox {
+        padding: 20px;
+    }
+
+    .close-button {
+        top: 15px;
+        right: 15px;
+    }
+}

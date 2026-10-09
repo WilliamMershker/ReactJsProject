@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.color-picker-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.color-picker-container h1 {
+    font-size: 40px;
+}
+
+.color-display {
+    width: 300px;
+    height: 300px;
+
+    margin: 20px auto;
+
+    border: 5px solid #ccc;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-display p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+input[type="color"] {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+}

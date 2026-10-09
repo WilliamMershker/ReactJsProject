@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f4f6;
+}
+
+.student {
+    width: 300px;
+    margin: 50px auto;
+    padding: 24px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    transition: 0.3s;
+}
+
+.student:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.student p {
+    margin: 10px 0;
+}
+
+.student span {
+    font-weight: bold;
+}
